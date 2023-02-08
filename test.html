@@ -1,0 +1,247 @@
+<div class="modal-content border border-white">
+    <div class="modal-header">
+        <h3  class="modal-title">Search Options</h3>
+    </div>
+    <div class="modal-body">
+    <div class="swap-container d-flex justify-content-around">
+    <button class="tablink btn btn-primary" onclick="openPage('person', this)"  id="defaultOpen">People</button>
+    <button class="tablink btn btn-primary" onclick="openPage('things', this)">Things</button>
+    <button class="tablink btn btn-primary" onclick="openPage('searchByPhoto', this)">Search By Photo</button>
+
+
+    </div>
+    <div id="person" class="tabcontent">
+    
+    <div class="border border-white">
+    
+        <div class="modal-body">
+        
+
+
+            <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                <label for="personStatus" class="control-label ">Status</label>
+                <div class="form-group">
+                    <select class="form-control" id="personStatus">
+                    <option>Missing</option>
+                    <option>Looking for his family</option>
+                    </select>
+                         
+                </div>
+                </div>
+            </div>
+        
+            <div class="col">
+            <div class="form-group">
+            <label for="personName"> Name </label>
+            <input type="text" class="form-control" name="personname" id="personName" />
+        
+            </div>
+        </div>
+
+     
+            </div>
+            <div class="form-row">
+            <div class="col">
+                <label for="personAge"> Age </label>
+                <input type="text" class="form-control" name="personAge" id="personAge" />
+            </div>
+    
+            <div class="col">
+            <div class="form-group">
+            <label for="personCountry"> Person Country </label>
+            <input type="text" class="form-control" name="personCountry" id="personCountry" />
+        
+            </div>
+        </div>
+    
+            </div>
+            
+            <div class=" d-flex  justify-content-between">
+
+           
+            <button type="submit" class="btn btn-secondary btn-lg ">clear</button>
+            <button id="LetsSearchCrap" type="submit" class="btn btn-primary btn-lg ">search</button>
+        </div>
+        </form>
+        </div>
+    
+    </div>
+    </div>
+    
+    <div id="things" class="tabcontent">
+    <div class="border border-white">
+    
+        <div class="modal-body">
+        
+    
+            <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                <label for="thingsType" class="control-label ">Type</label>
+                <div class="form-group">
+                    <select class="form-control" id="thingsType">
+                    <option>All</option>
+                    <option>Papers</option>
+                    <option>Personal belongings</option>
+                    <option>Transportations</option>
+                    <option>Others</option>
+
+                    </select>
+                        
+                </div>
+                </div>
+            </div>
+        
+            <div class="col">
+            <div class="form-group">
+            <label for="thingsStatus" class="control-label ">Status</label>
+            <div class="form-group">
+                <select class="form-control" id="thingsStatus">
+                <option>Missing</option>
+                <option>Founded</option>
+               
+                </select>
+                    
+            </div>
+            </div>
+        </div>
+        </div>
+
+      
+            <div class="form-row">
+            <div class="col">
+            <div class="form-group">
+                <label for="thingName">The Thing Name</label>
+                <input type="text" class="form-control" name="thingName" id="thingName" />
+            </div>
+            </div>
+         
+        
+    
+            
+            <div class="col">
+            <div class="form-group">
+            <label for="thingsColor" class="control-label ">Things Color</label>
+            <div class="form-group">
+                <select class="form-control" id="thingsColor">
+                <option>red</option>
+                <option>black</option>
+                <option>silver</option>
+                <option>gray</option>
+                <option>white</option>
+                <option>maroon</option>
+                <option>purple</option>
+                <option>fuchsia</option>
+                <option>green</option>
+                <option>lime</option>
+                <option>olive</option>
+                <option>yellow</option>
+                <option>navy</option>
+                <option>blue</option>
+                <option>teal</option>
+                <option>aqua</option>
+               
+                </select>
+                    
+            </div>
+            </div>
+
+            </div>
+            </div>
+
+            <div class="form-row d-flex  justify-content-between w-100">
+            <button type="submit" class="btn btn-secondary btn-lg ">clear</button>
+            <button id="LetsSearchCrap" type="submit" class="btn btn-primary btn-lg ">search</button>
+        </div>
+        </div>
+
+    </div>
+    </div>
+    
+     <div id="things" class="tabcontent">
+    
+    <div class="border border-white">
+    
+        <div class="modal-body">
+        
+
+
+            <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                <label for="personStatus" class="control-label ">Status</label>
+                <div class="form-group">
+                    <select class="form-control" id="personStatus">
+                    <option>Missing</option>
+                    <option>Looking for his family</option>
+                    </select>
+                         
+                </div>
+                </div>
+            </div>
+        
+            <div class="col">
+            <div class="form-group">
+            <label for="personName"> Name </label>
+            <input type="text" class="form-control" name="personname" id="personName" />
+        
+            </div>
+        </div>
+
+     
+            </div>
+            <div class="form-row">
+            <div class="col">
+                <label for="personAge"> Age </label>
+                <input type="text" class="form-control" name="personAge" id="personAge" />
+            </div>
+    
+            <div class="col">
+            <div class="form-group">
+            <label for="personCountry"> Person Country </label>
+            <input type="text" class="form-control" name="personCountry" id="personCountry" />
+        
+            </div>
+        </div>
+    
+            </div>
+            
+            <div class=" d-flex  justify-content-between">
+
+           
+            <button type="submit" class="btn btn-secondary btn-lg ">clear</button>
+            <button id="LetsSearchCrap" type="submit" class="btn btn-primary btn-lg ">search</button>
+        </div>
+        </form>
+        </div>
+    
+    </div>
+    </div>
+
+   
+     <div id="things" class="tabcontent">
+        <div class="border border-white">
+
+            <div class="modal-body">
+
+                <div class="image-upload mr-4">
+                    <label for="file-input">
+                        <i class="fa-solid fa-camera fa-2x"></i>
+
+                    </label>
+
+                    <input id="file-input" type="file" />
+
+                </div>
+                <div class=" d-flex  justify-content-between">
+
+           
+                    <button type="submit" class="btn btn-secondary btn-lg ">clear</button>
+                    <button id="LetsSearchCrap" type="submit" class="btn btn-primary btn-lg ">search</button>
+                </div>
+            </div>
+     </div>
+    </div>
+    

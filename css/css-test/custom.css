@@ -1,0 +1,450 @@
+/* ----------------------------------------------------------------
+	Custom CSS
+
+	Add all your Custom Styled CSS here for New Styles or
+	Overwriting Default Theme Styles for Better Hanlding Updates
+-----------------------------------------------------------------*/
+
+#header,
+#header-wrap,
+#logo,
+#logo img,
+#header .nav>li>a {
+    height: 75px;
+    line-height: 75px;
+    padding: 0 5px;
+}
+
+#header .nav>li>a:hover,
+#header .nav>li>a:focus {
+    background-color: transparent;
+}
+
+#logo {
+    line-height: inherit;
+}
+
+#logo a {
+    position: relative;
+}
+
+#logo .local-country {
+    position: absolute;
+    height: 0;
+    top: 0px;
+    font-size: 13px;
+    right: 15px;
+    right: 11px;
+    z-index: -1;
+    margin: 0;
+    padding-top: 20px;
+}
+
+@media (max-width: 991px) {
+    #primary-menu-trigger {
+        top: 12px;
+    }
+}
+
+#header .input-group {
+    padding-top: 14px;
+    line-height: initial;
+}
+
+#header .dropdown-menu {
+    margin: 0px;
+    padding-bottom: 0px;
+}
+
+#header .dropdown-menu .divider {
+    margin: 0px;
+}
+
+#header .dropdown-menu li a {
+    line-height: 30px;
+}
+
+.rtl .top-links li i.icon-angle-down {
+    padding-right: 5px !important;
+}
+
+.top-links .form-group {
+    margin: 0px !important;
+}
+
+.top-links .form-group .bootstrap-select .btn {
+    border: 0px !important;
+}
+
+.top-links li.dropdown-header {
+    margin: 0;
+    padding: 0;
+    line-height: 32px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#page-title.page-title-parallax {
+    padding: 75px 0px !important;
+}
+
+footer #copyrights {
+    padding: 15px 0px;
+    line-height: 30px;
+}
+
+.stretched #gotoTop {
+    bottom: 12px;
+}
+
+.button,
+label {
+    text-transform: none;
+}
+
+.button.disabled,
+.button[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5 !important;
+}
+
+.heading-block h1,
+.heading-block h2,
+.heading-block h3,
+.heading-block h4,
+.emphasis-title h1,
+.emphasis-title h2 {
+    text-transform: none;
+}
+
+.rtl .heading-block h1,
+.rtl .heading-block h2,
+.rtl .heading-block h3,
+.rtl .heading-block h4,
+.rtl .emphasis-title h1,
+.rtl .emphasis-title h2,
+.rtl label {
+    letter-spacing: 0px;
+}
+
+.feature-box .fbox-desc {
+    padding: 15px 5px !important;
+}
+
+.fancy-title h1,
+.fancy-title h2,
+.fancy-title h3,
+.fancy-title h4,
+.fancy-title h5,
+.fancy-title h6 {
+    padding: 0 15px;
+}
+
+.toppadding-xs {
+    padding-top: 10px !important;
+}
+
+.allWidth {
+    width: 100%;
+}
+
+.noresize {
+    resize: none;
+}
+
+.vresize {
+    resize: vertical;
+}
+
+.hresize {
+    resize: horizontal;
+}
+
+.hand {
+    cursor: pointer !important;
+}
+
+.blur {
+    -webkit-filter: blur(20px);
+    filter: blur(20px);
+}
+
+.lock-block {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+p {
+    margin-bottom: 20px !important;
+}
+
+.section {
+    padding: 50px 0;
+    background-color: #F5F5F5;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.padding-sm {
+    padding: 20px !important;
+}
+
+.bottommargin-xs {
+    margin-bottom: 10px !important;
+}
+
+.leftmargin-xs {
+    margin-left: 10px !important;
+}
+
+.rightmargin-xs {
+    margin-right: 10px !important;
+}
+
+/* .rtl .tright{text-align: left !important;} */
+
+.rtl input.email,
+.rtl input.phone,
+.rtl email.email {
+    direction: ltr !important;
+    text-align: right;
+}
+
+.ltr .top-links.fright ul ul {
+    right: 0 !important;
+    left: auto !important;
+}
+
+.rtl .top-links.fleft ul ul {
+    right: auto !important;
+    left: 0 !important;
+}
+
+.heading-block.center>span,
+.heading-block.title-center>span,
+.center .heading-block>span {
+    max-width: 800px
+}
+
+.rtl .sm-form-control {
+    min-height: 48px;
+}
+
+.text-dots {
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.text-lg {
+    font-size: 20px;
+    font-weight: 300;
+    color: #777;
+}
+
+.text-md,
+.text-md * {
+    font-size: 16px
+}
+
+;
+.accordion-aut .accordion .acctitle,
+.accordion-aut .accordion .acctitlec {
+    background-color: #f5f5f5;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.accordion-aut .accordion .acc_content {
+    padding-top: 15px;
+}
+
+.accordion-aut .toggle {
+    margin-bottom: 5px;
+}
+
+.accordion-aut .toggle.toggle-bg .togglet {
+    background-color: #f5f5f5;
+}
+
+.accordion-aut .toggle .togglec {
+    padding-top: 15px;
+}
+
+form .form-process {
+    top: 0;
+}
+
+.form-group label.req:after {
+    content: '*';
+    color: red;
+    padding: 0 5px;
+}
+
+.form-group.has-error .help-block li {
+    list-style: none;
+}
+
+.form-group-lg .form-control-static {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+.iconlist li {
+    margin-bottom: 10px;
+}
+
+.rtl .bootstrap-select>.dropdown-toggle {
+    padding-left: 25px;
+    padding-right: 12px !important;
+}
+
+.rtl .bootstrap-select.btn-group .dropdown-toggle .filter-option {
+    text-align: right !important;
+    float: right !important;
+}
+
+.rtl .bootstrap-select.btn-group .dropdown-toggle .caret {
+    left: 12px;
+    right: auto !important;
+}
+
+.rtl .bootstrap-select.btn-group.show-tick .dropdown-menu li a span.text {
+    margin-left: 34px;
+    margin-right: 0px !important;
+}
+
+.bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark {
+    margin-top: 0;
+}
+
+.rtl .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark {
+    left: 15px;
+    right: auto;
+}
+
+.rtl .si-share div {
+    float: left;
+}
+
+.rtl .input-group-addon:last-child {
+    border-left-color: #CCCCCC;
+}
+
+.rtl .file-preview-frame {
+    float: right;
+}
+
+.rtl .file-error-message pre,
+.file-error-message ul {
+    float: right;
+    text-align: right;
+    list-style-type: none;
+}
+
+.promo.promo-mini {
+    padding: 15px;
+}
+
+.promo.promo-mini h3 {
+    font-size: 14px;
+}
+
+.rtl .promo.promo-dark>h3 span,
+.rtl .promo.promo-dark>.container>h3 span {
+    direction: ltr !important;
+    display: inline-block;
+}
+
+.rtl .ranges li {
+    text-align: right;
+}
+
+.rtl .range_inputs {
+    text-align: right;
+    direction: rtl !important;
+}
+
+.rtl .datepicker .datepicker-months td,
+.rtl .datepicker .datepicker-months th {
+    width: 75px !important;
+}
+
+.rtl .checkbox-style+.checkbox-style-3-label.checkbox-small:before,
+.rtl .radio-style+.radio-style-3-label.radio-small:before {
+    margin: 0 0px 1px 8px;
+}
+
+.rtl .checkbox-style-1-label.checkbox-small:before,
+.rtl .radio-style-1-label.radio-small:before,
+.rtl .checkbox-style-2-label.checkbox-small:before,
+.rtl .radio-style-2-label.radio-small:before,
+.rtl .checkbox-style-3-label.checkbox-small:before,
+.rtl .radio-style-3-label.radio-small:before {
+    margin: 0 0px 1px 8px;
+}
+
+.rtl table.table-bordered.dataTable th:last-child,
+.rtl table.table-bordered.dataTable th:last-child,
+.rtl table.table-bordered.dataTable td:last-child,
+.rtl table.table-bordered.dataTable td:last-child {
+    border-right-width: 1px;
+}
+
+.rtl div.dataTables_wrapper div.dataTables_paginate,
+.rtl div.dataTables_wrapper div.dataTables_filter {
+    text-align: left;
+}
+
+div.table-responsive>div.dataTables_wrapper>div.row>div[class^="col-"]:first-child {
+    padding-right: 0px;
+}
+
+div.table-responsive>div.dataTables_wrapper>div.row>div[class^="col-"]:last-child {
+    padding-left: 0px;
+}
+
+.rtl div.dataTables_wrapper div.dataTables_filter input {
+    margin-left: 0px;
+    margin-right: 0.5em;
+}
+
+table td.action i {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.has-error .rc-anchor-light {
+    border: 1px solid #e42c3e !important;
+}
+
+.counter-cont .i-plain.i-xlarge {
+    font-size: 48px !important;
+}
+
+.counter.counter-small+h5 {
+    font-size: 16px;
+}
+
+/* ----------------------------------------------------------------
+	home
+-----------------------------------------------------------------*/
+
+.slider-caption p {
+    font-size: 28px;
+}
+
+.slider-caption h2 {
+    font-family: serif !important;
+}
+
+/* ----------------------------------------------------------------
+	About Us
+-----------------------------------------------------------------*/

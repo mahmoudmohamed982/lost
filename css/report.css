@@ -1,0 +1,138 @@
+
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+ 
+  body {
+    font-family: Montserrat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  }
+  /* Global Stylings */
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+  }
+  
+
+  .width-50 {
+    width: 50%;
+  }
+  
+  .ml-auto {
+    margin-left: auto;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  .report-form{
+    min-height: 950px;
+    padding-top: 70px;
+  }
+  /* Progressbar */
+  .progressbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    counter-reset: step;
+    margin: 2rem 0 4rem;
+  }
+  
+  .progressbar::before,
+  .progress {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: var(--white);
+    z-index: 1;
+  }
+  
+  .progress {
+    background-color: var(--main-color);
+    width: 0%;
+    transition: 0.3s;
+  }
+  
+  .progress-step {
+    min-width: 2.5rem;
+    height: 2.1875rem;
+    background-color:  var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+  }
+  
+  .progress-step::before {
+    counter-increment: step;
+    content: counter(step);
+  }
+  
+  .progress-step::after {
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    font-size: 0.85rem;
+    color:  var(--white);
+  }
+  
+  .progress-step-active {
+    background-color: var(--main-color);
+    color: #1aebeb;
+  }
+  
+  /* Form */
+  .form_report {
+    background: var(--gradient-bg);
+    max-width: 800px;
+   max-height: 550px;
+    margin: 50px auto 0 auto;
+    box-shadow: -2px 1px 11px 1px lightblue;
+    border-radius: 0.35rem;
+    padding: 1.5rem;
+  }
+  
+  .form-step {
+    display: none;
+    transform-origin: top;
+    animation: animate 0.5s;
+  }
+  
+  .form-step-active {
+    display: block;
+  }
+  
+  .input-group {
+    margin: 2rem 0;
+  }
+  
+  @keyframes animate {
+    from {
+      transform: scale(1, 0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1, 1);
+      opacity: 1;
+    }
+  }
+  
+  /* Button */
+  .btns-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .btn-next{
+    display: block;
+  }
+  
+ 

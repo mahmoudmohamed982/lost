@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    background: #ffa537;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #6441A5, #2a0845);
+    /* Chrome 10-25, Safari 5.1-6 */
+}
+
+body {
+    font-family: montserrat, arial, verdana;
+    background: transparent;
+}
+
+/*form styles*/
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 30px;
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+
+    /*stacking fieldsets above each other*/
+    position: relative;
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+/*inputs*/
+#msform input,
+#msform textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+}
+
+#msform input:focus,
+#msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #4d4d4d;
+    outline-width: 0;
+    transition: All 0.5s ease-in;
+    -webkit-transition: All 0.5s ease-in;
+    -moz-transition: All 0.5s ease-in;
+    -o-transition: All 0.5s ease-in;
+}
+
+/*buttons*/
+#msform .action-button {
+    width: auto;
+    background: #4d4d4d;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 10px;
+    margin: 10px 5px;
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #4d4d4d;
+}
+
+#msform .action-button-previous {
+    width: auto;
+    background: #C5C5F1;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 10px;
+    margin: 10px 5px;
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #C5C5F1;
+}
+
+/*headings*/
+.fs-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/*progressbar*/
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+}
+
+#progressbar li {
+    list-style-type: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 24px;
+    height: 24px;
+    line-height: 26px;
+    display: block;
+    font-size: 12px;
+    color: #333;
+    background: white;
+    border-radius: 25px;
+    margin: 0 auto 10px auto;
+}
+
+/*progressbar connectors*/
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1;
+    /*put it behind the numbers*/
+}
+
+#progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+}
+
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #4d4d4d;
+    color: white;
+}
+
+
+/* Not relevant to this form */
+.dme_link {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.dme_link a {
+    background: #FFF;
+    font-weight: bold;
+    color: #4d4d4d;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 5px 25px;
+    font-size: 12px;
+}
+
+.dme_link a:hover,
+.dme_link a:focus {
+    background: #C5C5F1;
+    text-decoration: none;
+}
+
+
+
+
+
+
+input#fname {
+    width: 48%;
+    float: left;
+    margin-right: 2%;
+}
+
+input#lname {
+    float: left;
+    width: 48%;
+    margin-left: 2%;
+}
+
+.region {
+    width: 32.33% !Important;
+    float: left;
+}
+
+input#state {
+    margin: 0% 1.4%;
+}
+
+.repeat {
+    font-weight: bold;
+}
+
+.fields-text {
+    text-align: left;
+}
+
+input#Rfname {
+    width: 48%;
+    float: left;
+    margin-right: 2%;
+}
+
+input#Rlname {
+    float: left;
+    width: 48%;
+    margin-left: 2%;
+}
+
+.field-group {
+    width: 49%;
+    float: left;
+}
+
+.field-group:nth-child(even) {
+    margin-left: 1%
+}
+
+.field-group:nth-child(odd) {
+    margin-right: 1%
+}
+
+.alert {
+    color: red;
+}
+
+input#exampleCheck1 {
+    float: left !important;
+    width: auto;
+}
+
+.box-text {
+    float: left;
+    margin: 1px 0px 0px 8px;
+    font-weight: 500;
+}
+
+p.text-danger {
+    text-align: left;
+}
+
+.region label {
+    text-align: left !important;
+    font-weight: inherit;
+    width: 100%;
+}
+
+.zip-error {
+    color: #d70000;
+
+    border-top: 2px dotted #ec9696;
+    border-bottom: 2px dotted #ec9696;
+    text-align: center;
+    padding: 5px 10px;
+    margin-top: 10px;
+    display: none;
+}
+
+span.required {
+    color: red;
+    font-weight: bold;
+}
+
+.city-wrap.region {
+    margin: 0 1%;
+}
+
+@media only screen and (max-width:640px) {
+    .field-group {
+        width: 100%;
+        float: left;
+    }
+
+    .region {
+        width: 100% !Important;
+        float: left;
+    }
+
+    fieldset {
+        width: 100% !Important;
+        margin: 0 0 !Important;
+    }
+}

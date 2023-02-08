@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>report about founded Things</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <link rel="stylesheet" href="css/report.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/icofont.css" />
+    <script defer src="/js/axios.min.js"></script>
+    <script defer src="/js/script.js"></script>
+</head>
+
+<body>
+    <header class="nav-bg-color text-white w-100 fixed-top">
+        <nav class="navbar navbar-expand-lg">
+            <a href="index.html" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white logo-link"
+                style="text-decoration: none">
+                <i class="fa-solid fa-magnifying-glass-location fa-lg"></i>
+                <span class="font-weight-bold logoText ">Missing</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto w-100 justify-content-end align-items-center">
+
+                    <li>
+                        <a href="/Upload.html" class="nav-link text-white uploadText"> Upload Case </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <div class="dropdown">
+                            <button class="btn text-light dropdown-toggle lostText" type="button" id="dropdowntypelost"
+                                data-toggle="dropdown" aria-expanded="false">Lost Things</button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item PeopleText" href="all-L-people.html">People</a>
+                                <a class="dropdown-item TransportaionsT" href="all-L-transportaions.html">Transportaions</a>
+                                <a class="dropdown-item DevicesT" href="all-L-devices.html">Devices</a>
+                                <a class="dropdown-item PapersT" href="all-L-papers.html">Papers</a>
+                                <a class="dropdown-item AnotherT" href="L-another.html">Another Things</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="btn text-light dropdown-toggle FoundT" type="button" id="dropdowntypefound"
+                                data-toggle="dropdown" aria-expanded="false">Found Things</button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item PeopleText" href="all-F-people.html">People</a>
+                                <a class="dropdown-item TransportaionsT" href="all-F-transportaions.html">Transportaions</a>
+                                <a class="dropdown-item  DevicesT" href="all-F-devices.html">Devices</a>
+                                <a class="dropdown-item PapersT" href="all-F-papers.html">Papers</a>
+                                <a class="dropdown-item AnotherT" href="F-another.html">Another Things</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="about.html" class="nav-link text-white AboutT"> About us </a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="nav-link text-white ContactT"> Contact us </a>
+                    </li>
+
+                    <li class="w-25 text-center">
+                        <div class="dropdown">
+                            <button class="btn btn-sm dropdown-toggle text-white LangT" type="button" id="dropdownlangcountry"
+                                data-toggle="dropdown" aria-expanded="false">
+                                Lang <i class="fa-solid fa-language fa-lg"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <h6 class="dropdown-header SelectLangT">Select Language</h6>
+                                <a class=" arabic dropdown-item ArabicT" href="#" id="arabic" >Arabic</a>
+                                <a class=" english dropdown-item EnglishT" href="#" id="english">English</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+
+                <div class="nav-item profile">
+                    <div class="dropdown">
+                        <button class="btn nav-bg-color text-light dropdown-toggle" type="button" id="dropdownuser"
+                            data-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-circle-user"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item ProfileT" href="/profile.html ">My Profile</a>
+                            <a class="dropdown-item MyCasesT" href="/my-cases.html  ">My Cases</a>
+                            <a class="dropdown-item AdminT" id="openAdmin" href="/admin.html">Admin Controls</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-end d-flex flex-row w-25 logging-div">
+                    <button type="button" id="btn_log_out"
+                        class="btn btn-light text-dark me-2 shadow-sm p-2 bg-white rounded btn-sm LogoutT">Logout</button>
+                    <button type="button" id="btn_log_in"
+                        class="btn btn-light text-dark me-2 shadow-sm p-2 bg-white rounded btn-sm LoginT">Login</button>
+                    <button type="button" id="btn_sign_up" class="btn btn-primary ml-2 btn-sm Sign-upT">Sign-up</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container report-form" id="uploadPage">
+        <div class="form-title states-title " >
+            <h3 class="font-weight-bold mb-2 uploadH" id="">Report something found or lost</h3>
+            <p class="text-secondary uploadDescT" >Do you have found thing and want to find his owner? complete this form to help
+                you!</p>
+        </div>
+
+        <div class="border border-white">
+            <div class="modal-header">
+                <h3 class="modal-title w-100 text-center uploadText" style="font-weight: bold">Upload Case</h3>
+            </div>
+            <div class="modal-body">
+                <div class="swap-container d-flex justify-content-between shadow-lg p-3 bg-body rounded">
+                    <button class="tablink btn btn-info PeopleText" onclick="openPage('person', this)"
+                        id="defaultOpen">People</button>
+                    <button class="tablink btn btn-info AnotherT" onclick="openPage('things', this)">Things</button>
+                </div>
+                <!-- Person -->
+                <div id="person" class="tabcontent nav-bg-color">
+                    <div class="border border-white">
+                        <div class="modal-body">
+                            <div class="form-row">
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="PersonStatus" class="control-label">Status</label>
+                                        <div class="form-group">
+                                            <select class="form-control caseStatus">
+                                                <option value="missing">Missing</option>
+                                                <option value="found">Looking for his family</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="PersonGender" class="control-label">Gender</label>
+                                        <div class="form-group">
+                                            <select class="form-control caseGender">
+                                                <option value="male">male</option>
+                                                <option value="female">female</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="Person_Name"> first name </label>
+                                        <input type="text" class="form-control caseName" name="personname" />
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">Please fill out this field.</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="Person_Name"> father name </label>
+                                        <input type="text" class="form-control caseFName" name="personname" />
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="Person_Name"> mother name </label>
+                                        <input type="text" class="form-control caseMName" name="personname" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="Person_Country">Country <i class="fa-solid fa-earth-africa"></i>
+                                        </label>
+                                        <!-- <input type="text" class="form-control caseCountry" name="PersonCountry" /> -->
+                                        <select name="" id="" class="form-control caseCountry">
+                                            <option value="Egypt">Egypt</option>
+                                            <option value="Palestine">Palestine</option>
+                                            <option value="Tunisia">Tunisia</option>
+                                            <option value="Algeria">Algeria</option>
+                                            <option value="Morocco">Morocco</option>
+                                            <option value="Iraq">Iraq</option>
+                                            <option value="Syria">Syria</option>
+                                            <option value="Yemen">Yemen</option>
+                                            <option value="Libya">Libya</option>
+                                            <option value="Jordan">Jordan</option>
+                                            <option value="Emirates">Emirates</option>
+                                            <option value="Lebanon">Lebanon</option>
+                                            <option value="Mauritania">Mauritania</option>
+                                            <option value="Kuwait">Kuwait</option>
+                                            <option value="Oman">Oman</option>
+                                            <option value="Qatar">Qatar</option>
+                                            <option value="Jubbuti">Jubbuti</option>
+                                            <option value="Bahrain">Bahrain</option>
+                                            <option value="Union of Comoros">Union of Comoros</option>
+                                            <option value="Palestine">Palestine</option>
+                                            <option value="Somalia]">Somalia</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2">
+                                    <label for="PersonAge">year Of Birth</label>
+                                    <input type="text" class="form-control caseYearOfBirth" name="PersonAge" />
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="PersonLocationOfLoss">state <i class="fa-solid fa-location-dot"></i>
+                                        </label>
+                                        <input type="text" class="form-control caseState" name="PersonLocationOfLoss" />
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="PersonLocationOfLoss"> city <i class="fa-solid fa-location-dot"></i>
+                                        </label>
+                                        <input type="text" class="form-control caseCity" name="PersonLocationOfLoss" />
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="P-phone">Number <i class="fa-brands fa-whatsapp"></i></label>
+                                        <input type="tel" class="form-control caseNumber" name="P-phone" />
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="PersonEmail">Email <i class="fa-solid fa-envelope"></i></label>
+                                        <input type="email" class="form-control caseEmail" name="PersonEmail" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="dob">Date of loss</label>
+                                        <input class="form-control caseDate" type="date" name="dol" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="P-phone">Weight <i class="fa-brands fa-whatsapp"></i></label>
+                                        <input type="tel" class="form-control caseWeight" name="P-phone" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="P-phone">Height <i class="fa-brands fa-whatsapp"></i></label>
+                                        <input type="tel" class="form-control caseHeight" name="P-phone" />
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="container">
+                                        <div class="form-group" x-data="{ fileName: '' }">
+                                            <div class="input-group shadow">
+                                                <span class="input-group-text px-3 text-muted"><i
+                                                        class="fas fa-image fa-lg"></i></span>
+                                                <input type="file" x-ref="file"
+                                                    @change="fileName = $refs.file.files[0].name" name="img[]"
+                                                    class="d-none casePhoto" />
+                                                <input type="text" class="form-control form-control-lg casePhotoName"
+                                                    placeholder="Upload case photo" x-model="fileName" />
+                                                <button class="browse btn btn-primary px-4" type="button"
+                                                    x-on:click.prevent="$refs.file.click()"><i class="fas fa-image"></i>
+                                                    Upload</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-row mb-3 d-flex justify-content-center w-100">
+                                    <div class="form-floating">
+                                        <textarea class="form-control caseComment" placeholder="Leave a comment here"
+                                            cols="80" rows="5"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <button type="submit" class="btn btn-primary btn-lg LetsUploadCrap">Upload</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="things" class="tabcontent nav-bg-color">
+                    <div class="border border-white">
+                        <div class="modal-body">
+                            <div class="form-row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="thingStatus" class="control-label">Status</label>
+                                        <div class="form-group">
+                                            <select class="form-control caseStatus">
+                                                <option value="missing">Missing</option>
+                                                <option value="found">found</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="thingType" class="control-label">Type</label>
+                                        <div class="form-group">
+                                            <select class="form-control caseType">
+                                                <option value="papers">Papers</option>
+                                                <option value="devices">Devices</option>
+                                                <option value="transportations">Transportaion</option>
+                                                <option value="others">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="caseName"> Name </label>
+                                        <input type="text" class="form-control caseName" name="caseName" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="caseModel"> Model </label>
+                                        <input type="text" class="form-control caseModel" name="caseModel" />
+                                    </div>
+                                </div>
+
+                         
+                            
+                            <div class="form-row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="LocationOfLoss">Location Of Loss <i
+                                                class="fa-solid fa-location-dot"></i> </label>
+                                        <input type="text" class="form-control caseLocation" name="LocationOfLoss" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="P-phone">Phone <i class="fa-brands"></i></label>
+                                        <input type="tel" class="form-control caseNumber" name="P-phone" />
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="caseNumber"> whatsapp Number <i
+                                                class="fa-brands fa-whatsapp"></i></label>
+                                        <input type="tel" class="form-control caseWnumber" name="caseNumber" />
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="Messenger">Messenger User Name <i
+                                                class="fa-brands fa-facebook-messenger"></i></label>
+                                        <input type="text" class="form-control caseMessenger" name="P-Email" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="dob">Date of loss</label>
+                                        <input class="form-control caseDate" type="date" name="dol" />
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="thingsColor" class="control-label">Things Color</label>
+                                        <div class="form-group">
+                                            <!-- <input type="text" class="form-control caseColor" id="thingsColor" /> -->
+                                            <select name="" id="" class="form-control caseColor">
+                                                <option value="Red">Red</option>
+                                                <option value="black">black</option>
+                                                <option value="silver">silver</option>
+                                                <option value="gray">gray</option>
+                                                <option value="white">white</option>
+                                                <option value="maroon">maroon</option>
+                                                <option value="purple">purple</option>
+                                                <option value="fuchsia">fuchsia</option>
+                                                <option value="green">green</option>
+                                                <option value="lime">lime</option>
+                                                <option value="olive">olive</option>
+                                                <option value="yellow">yellow</option>
+                                                <option value="navy">navy</option>
+                                                <option value="blue">blue</option>
+                                                <option value="teal">teal</option>
+                                                <option value="aqua">aqua</option>
+                                                <option value="blue">blue</option>
+                                                <option value="lawngreen">lawngreen</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div class="container col-md-6">
+                                    <div class="form-group" x-data="{ fileName: '' }">
+                                        <div class="input-group shadow">
+                                            <span class="input-group-text px-3 text-muted"><i
+                                                    class="fas fa-image fa-lg"></i></span>
+                                            <input type="file" x-ref="file"
+                                                @change="fileName = $refs.file.files[0].name" name="img[]"
+                                                class="d-none casePhoto" />
+                                            <input type="text" class="form-control form-control-lg casePhotoName"
+                                                placeholder="Upload case photo" x-model="fileName" />
+                                            <button class="browse btn btn-primary px-4" type="button"
+                                                x-on:click.prevent="$refs.file.click()"><i class="fas fa-image"></i>
+                                                Upload</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                       
+
+                                <div class="form-row mb-3 d-flex justify-content-center w-100">
+                                    <div class="form-floating">
+                                        <label for="floatingTextarea3">Comments</label>
+                                        <textarea class="form-control caseComment" placeholder="Leave a comment here"
+                                            cols="80" rows="5"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <button type="submit" class="btn btn-primary btn-lg LetsUploadCrap">Upload</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section -->
+    <footer class="text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-2 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-2">
+                <!-- Facebook -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button"><i
+                        class="fab fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i
+                        class="fab fa-twitter"></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!" role="button"><i
+                        class="fab fa-google"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i
+                        class="fab fa-instagram"></i></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"><i
+                        class="fab fa-linkedin-in"></i></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-2 CopyrightT">
+            © 2022 Copyright:
+            <a class="text-white " href="#">Mahmoud Mohamed </a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- End footer section -->
+
+    <!--overlay section -->
+    <div class="overlay center" id="overlay">
+        <div class="content">
+            <button class="btn-clear" id="btn-close-overlay">
+                <i class="icofont-close"></i>
+            </button>
+            <div class="content-body center"></div>
+        </div>
+    </div>
+    <!--End overlay section -->
+
+    <script>
+        // Disable form submissions if there are invalid fields
+        (function () {
+            "use strict";
+            window.addEventListener(
+                "load",
+                function () {
+                    // Get the forms we want to add validation styles to
+                    var forms = document.getElementsByClassName("needs-validation");
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function (form) {
+                        form.addEventListener(
+                            "submit",
+                            function (event) {
+                                if (form.checkValidity() === false) {
+                                    event.preventDefault();
+                                    event.stopPropagation();
+                                }
+                                form.classList.add("was-validated");
+                            },
+                            false
+                        );
+                    });
+                },
+                false
+            );
+        })();
+    </script>
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
